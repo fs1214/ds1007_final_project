@@ -1,2 +1,4 @@
-ds1007_final_project
-====================
+Python_Project
+==============
+
+Create a stock analysis project using Tkinter for GUI
