@@ -19,9 +19,9 @@ class TestUtilitiesInputFunctionsIsValidStockName(unittest.TestCase):
         self.stock1 = "IBM"
         self.stock2 = "F"
         self.stock3 = "huabanxie"
-        self.stock4 = "TkNIMEI"
-        self.date1 = "2010/1/1"
-        self.date2 = "2011/1/1"
+        self.stock4 = "baba"
+        self.date1 = "2009/1/1"
+        self.date2 = "2009/10/1"
 
     def tearDown(self):
         print "test stock names."
@@ -144,6 +144,36 @@ class TestUtilitiesInputFunctionsIsValidDateRange(unittest.TestCase):
         """
         self.assertFalse(IsValidDateRange(self.date2,self.date1))
 
+class TestUtilitiesInputFunctionsIsValidEndDate(unittest.TestCase):
+    """
+    Test the IsValidEndDate functions in Utilities package.
+    """
+
+    def setUp(self):
+        """
+        set up the test data.
+        """
+        self.date1 = "2011/12/11"
+        self.date2 = "2016/1/1"
+
+
+    def tearDown(self):
+        print "test end date."
+
+
+    def testValidEndDate(self):
+        """
+        Test if the end date is valid.
+        """
+        self.assertTrue(IsValidEndDate(self.date1))
+
+        
+    def testInvalidEndDate(self):
+        
+        """
+        Test if the end date is invalid.
+        """
+        self.assertFalse(IsValidEndDate(self.date2))
 
 class TestUtilitiesInputFunctionsIsValidNum(unittest.TestCase):
     """

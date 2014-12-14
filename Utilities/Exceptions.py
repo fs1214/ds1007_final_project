@@ -6,10 +6,10 @@ Created on 2014.12.9
 '''
 class StockNameInputException(Exception):
     """
-    Raise when the input is not a stock name in the yahoo financial data.
+    Raise when the input is not a valid stock ticker symbol in the yahoo financial data.
     """
     def __str__(self):
-        return "The input is invalid. It must be a stock name in the yahoo financial data."
+        return "The input is invalid. It must be a stock ticker symbol in the yahoo financial data."
     
 class DateInputException(Exception):
     """
